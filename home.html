@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - StreamCol Gaming</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="calendarSection">
+</head>
+<body>
+    <header class="header-footer">
+        <div class="content logo-container">
+            <button id="logoutButton" onclick="logout()" style="display: none;">Cerrar Sesión</button>
+            <img src="imgs/logo.jpg" id="logo" alt="Logo">
+        </div>
+    </header>    
+    <nav>
+        <ul>
+            <li><a href="#" id="link-about">About Us</a></li>
+            <li><a href="#" id="link-services">Servicios Destacados</a></li>
+            <li><a href="#" id="link-testimonials">Testimonios y Reseñas</a></li>
+        </ul>
+    </nav>
+    <section id="about" style="display:block;">
+        <h2>About Us</h2>
+        <p>
+            En StreamCol Gaming, nos enorgullecemos de ser pioneros en la revolución del streaming de videojuegos en Colombia desde nuestra fundación en 2024. Con sede principal en Bogotá, ofrecemos a los entusiastas del gaming una plataforma vibrante y dinámica donde pueden disfrutar de contenido de alta calidad y participar en una comunidad activa y acogedora. Nuestro equipo está compuesto por apasionados gamers, técnicos expertos y creativos digitales, todos comprometidos en proporcionar la mejor experiencia de entretenimiento en plataformas como Twitch, donde transmitimos diariamente una diversidad de videojuegos que captan la atención tanto de audiencias locales como internacionales.
+        </p>
+        <p>
+            Además, en StreamCol Gaming nos dedicamos al crecimiento y fortalecimiento de redes sociales, ayudando a nuestros streamers y colaboradores a ampliar su alcance y mejorar su presencia en línea. Nuestro objetivo es no solo ser líderes en el streaming de videojuegos, sino también un recurso valioso para la comunidad gaming, proporcionando soporte, educación y oportunidades de networking que fomentan el desarrollo y éxito de nuestros miembros. Únete a nosotros para ser parte de esta emocionante aventura en el mundo del gaming.
+        </p>
+    </section>
+    <section id="services">
+        <h2>Servicios Destacados</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <img src="imgs/social-media-management.jpg" alt="Manejo de redes sociales">
+                <h3>Manejo de redes sociales</h3>
+                <button onclick="addSocialMedia()">Adquirir servicio</button>
+                <div id="socialMediaForm" style="display:none;">
+                    <button onclick="addSocialMediaField()">Añadir red social</button>
+                    <div id="socialMediaFields"></div>
+                    <button>Guardar</button>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="imgs/advertising.jpg" alt="Publicidad">
+                <h3>Publicidad</h3>
+                <button onclick="requestAdvertising()">Adquirir servicio</button>
+                <div id="advertisingMessage" class="alert-message" style="display:none;">
+                    <h3 class="alert-title">Solicitud Enviada</h3>
+                    Solicitud de publicidad creada
+                    <p></p>
+                    <img src="imgs/done.jpg" alt="done">
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="imgs/stream-calendar.jpg" alt="Calendarios de stream">
+                <h3>Calendarios de stream</h3>
+                <button onclick="manageCalendars()">Adquirir servicio</button>
+                <div id="calendarSection" style="display:none;">
+                    
+                    <button>Guardar</button>
+                </div>
+            </div>
+            <div class="service-card">
+                <img src="imgs/stream-class.jpg" alt="Agendar clases de Stream">
+                <h3>Agendar clases de Stream</h3>
+                <button onclick="scheduleClass()">Adquirir servicio</button>
+                <div id="classScheduleMessage" class="alert-message" style="display:none;">
+                    <h3 class="alert-title">Clase Agendada</h3>
+                    Pronto uno de nuestros agentes se contactará contigo para agendar la clase
+                    <p></p>
+                    <img src="imgs/done.jpg" alt="done">
+                </div>
+    </section>    
+    <section id="testimonials">
+        <h2>Testimonios y Reseñas</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre aquí">
+            </div>
+            <div class="form-group">
+                <label for="email">Correo:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+            </div>
+            <div class="form-group">
+                <label for="testimony">Testimonio:</label>
+                <textarea id="testimony" name="testimony" placeholder="Escribe tu experiencia..."></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar</button>
+        </form>
+    </section>    
+    <footer class="footer-bar">
+        Contáctanos: 3125450543 - Correo: aaacosta.poligran.edu.co
+    </footer>
+    <script>
+        document.getElementById('link-about').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleSection('about');
+        });
+        document.getElementById('link-services').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleSection('services');
+        });
+        document.getElementById('link-testimonials').addEventListener('click', function(event) {
+            event.preventDefault();
+            toggleSection('testimonials');
+        });
+
+        function toggleSection(sectionId) {
+            const sections = ['about', 'services', 'testimonials'];
+            sections.forEach(id => {
+                const sec = document.getElementById(id);
+                sec.style.display = (id === sectionId ? 'block' : 'none');
+            });
+        }
+
+        function addSocialMedia() {
+            document.getElementById('socialMediaForm').style.display = 'block';
+        }
+
+        function addSocialMediaField() {
+            const container = document.getElementById('socialMediaFields');
+            const newField = document.createElement('div');
+            newField.innerHTML = '<input type="text"><button onclick="removeField(this)">Eliminar</button>';
+            container.appendChild(newField);
+        }
+
+        function removeField(button) {
+            button.parentElement.remove();
+        }
+
+        function requestAdvertising() {
+            var adMessage = document.getElementById("advertisingMessage");
+            adMessage.style.opacity = 1; // Hacer visible el mensaje
+            adMessage.style.display = "block";
+            setTimeout(function() {
+                adMessage.style.opacity = 0; // Comienza a desvanecer el mensaje
+                setTimeout(function() { // Espera a que termine el desvanecimiento para ocultarlo
+                    adMessage.style.display = "none";
+                }, 500); // Tiempo que tarda en desvanecerse completamente
+            }, 3000);  // El mensaje se muestra durante 3 segundos antes de comenzar a desaparecer
+        }
+
+        function manageCalendars() {
+            document.getElementById('calendarSection').style.display = 'block';
+        }
+
+        function scheduleClass() {
+            var classMessage = document.getElementById("classScheduleMessage");
+            classMessage.style.opacity = 1; // Hacer visible el mensaje
+            classMessage.style.display = "block";
+            setTimeout(function() {
+                classMessage.style.opacity = 0; // Comienza a desvanecer el mensaje
+                setTimeout(function() { // Espera a que termine el desvanecimiento para ocultarlo
+                    classMessage.style.display = "none";
+                }, 500); // Tiempo que tarda en desvanecerse completamente
+            }, 3000);  // El mensaje se muestra durante 3 segundos antes de comenzar a desaparecer
+        }
+    </script>
+    <script src="main.js"></script>
+    <script>  main.js
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const allSections = document.querySelectorAll("section");
+                allSections.forEach(sec => sec.classList.add('hidden'));
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+            });
+        });
+    });
+    </script>
+</body>
+</html>

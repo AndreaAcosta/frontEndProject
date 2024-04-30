@@ -1,0 +1,332 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+body > .content {
+    flex: 1 0 auto;
+}
+
+.footer-bar {
+    flex-shrink: 0; /* Impide que el footer se comprima */
+}
+
+
+/* Estilo para el header y footer con degradado */
+.header-footer {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido del header al lado derecho */
+    align-items: center; /* Centra el logo verticalmente */
+}
+
+#logo {
+    height: 50px; /* Ajusta este valor según el tamaño deseado del logo */
+    width: auto; /* Mantiene la proporción del logo */
+}
+
+
+/* Estilo específico para el footer para mantenerlo en la parte inferior */
+/* Estilos Generales del Footer */
+.footer-bar {
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.header-footer {
+    background: linear-gradient(to right, #007bff, #6699ff);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+/* Estilo para el header con degradado y posición de elementos */
+.header-footer {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+/* Estilos para el menú de navegación */
+nav {
+    background: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos Generales del Footer */
+.footer-bar {
+    background: linear-gradient(to right, #00f2fe, #4facfe);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Estilos específicos para la home */
+#cta {
+    background-color: #004a99;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-container h2 {
+    font-size: 2em;
+}
+
+.cta-container p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    max-width: 600px;
+}
+
+.cta-container button {
+    font-size: 1em;
+    padding: 10px 15px;
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    width: 200px;
+    transition: background-color 0.3s;
+}
+
+.cta-container button:hover {
+    background-color: #cc8400;
+}
+#about {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#about h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#about p {
+    text-align: justify;
+    color: #666;
+    line-height: 1.6;
+}
+#services {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#services h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#services p {
+    text-align: justify;
+    color: #666;
+    line-height: 1.6;
+}
+#testimonials {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#testimonials h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#testimonials p {
+    text-align: justify;
+    color: #666;
+    line-height: 1.6;
+}
+#services {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    width: 300px;
+    margin: 10px;
+    transition: transform 0.3s;
+    position: relative;
+    padding: 10px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.service-card h3 {
+    color: #333;
+}
+
+.service-card button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    width: calc(100% - 8px);
+    border-radius: 5px;
+}
+
+.service-card button:hover {
+    background-color: #45a049;
+}
+
+.service-card div[style*="display: none"] {
+    display: none;
+}
+.alert-message {
+    padding: 20px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco semi-transparente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 1000; /* Asegura que la alerta esté por encima de otros elementos */
+    opacity: 0; /* Comienza oculta */
+    transition: opacity 0.5s;
+}
+
+.alert-title {
+    color: #8B0000; /* Rojo grisáceo */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+#testimonials {
+    display: none; /* Cambiar esto según la lógica de visualización */
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#testimonials h2 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group textarea {
+    height: 120px;
+}
+
+.submit-button {
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    padding: 15px 30px; /* Reducido de 20px a 15px para hacerlo menos ancho */
+    border-radius: 5px;
+    width: auto; /* Cambiado de 100% a auto para no ocupar todo el ancho */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; /* Asegura que el botón sea un bloque para centrarlo */
+    margin: 0 auto; /* Centra el botón horizontalmente */
+}
+
+.submit-button:hover {
+    background-color: #3a82d1;
+}
+
+
+.submit-button:hover {
+    background-color: #3a82d1;
+}
+
+

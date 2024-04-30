@@ -1,0 +1,447 @@
+/* Reset básico y estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Estilo para el header y footer con degradado */
+.header-footer {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Estilo específico para el footer para mantenerlo en la parte inferior */
+.footer-bar {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Contenedor del formulario de login */
+.login-container {
+    width: 300px;
+    margin: 80px auto 50px; /* Ajuste para que no se superponga con el footer */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave para resaltar el formulario */
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5c85d6;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4a69ad; /* Cambio de color al pasar el mouse */
+}
+/* Estilo para el header y footer con degradado */
+.header-footer {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px; /* Tamaño más grande para el título */
+}
+
+/* Contenedor del formulario de login */
+.login-container {
+    width: 300px;
+    margin: 80px auto 50px; /* Ajuste para que no se superponga con el footer */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave para resaltar el formulario */
+    padding-right: 30px; /* Más espacio en el costado derecho */
+}
+
+input[type="text"], input[type="email"], input[type="password"], select {
+    width: calc(100% - 16px); /* Resta para compensar el padding y bordes */
+    padding: 8px;
+    margin: 10px 0; /* Mayor separación vertical entre campos */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+button {
+    width: calc(50% - 10px); /* Ajuste para que dos botones quepan en la misma línea con espacio entre ellos */
+    padding: 10px;
+    margin: 5px; /* Espacio alrededor de los botones */
+    background-color: #5c85d6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Esquinas redondeadas para los botones */
+    float: left; /* Alinea los botones a la izquierda */
+}
+
+button:hover {
+    background-color: #4a69ad; /* Cambio de color al pasar el mouse */
+}
+
+/* Limpiar flotados para asegurarse de que el contenedor no colapse */
+form:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Estilos para el menú de navegación */
+nav {
+    background: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Estilos adicionales para la página Home */
+header img {
+    height: 50px; /* Ajusta según el tamaño deseado */
+}
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el relleno por defecto */
+}
+
+/* Estilos del Header */
+header {
+    background: linear-gradient(to right, #0066ff, #0099ff); /* Degradado azul */
+    color: white;
+    padding: 20px 10px; /* Ajusta el relleno según sea necesario */
+    text-align: center;
+    position: relative; /* Posicionamiento relativo para el posicionamiento de la imagen */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0; /* Elimina el margen por defecto para alinear correctamente */
+}
+
+header img {
+    position: absolute; /* Posicionamiento absoluto dentro del header */
+    right: 10px; /* Alineado a la derecha */
+    top: 10px; /* Alineado al borde superior */
+    height: 60px; /* Altura de la imagen, ajusta según sea necesario */
+}
+
+/* Estilos de la Navegación */
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Estilos del Main */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilos del Footer */
+footer {
+    background: linear-gradient(to right, #0099ff, #0066ff); /* Degradado azul inverso */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0; /* Elimina el margen por defecto */
+}
+#about {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#about h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#about p {
+    text-align: justify;
+    color: #666;
+    line-height: 1.6;
+}
+#services {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#services h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#services p {
+    text-align: justify;
+    color: #666;
+    line-height: 1.6;
+}
+#testimonials {
+    padding: 20px;
+    margin: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#testimonials h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+#testimonials p {
+    text-align: justify;
+    color: #666;
+    line-height: 1.6;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.header-footer {
+    background: linear-gradient(to right, #007bff, #6699ff);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+#cta {
+    background-color: #004a99;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.cta-container {
+    display: flex; /* Usamos flexbox */
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    align-items: center; /* Alineación horizontal al centro */
+    justify-content: center; /* Alineación vertical al centro */
+}
+
+.cta-container h2 {
+    font-size: 2em;
+}
+
+.cta-container p {
+    font-size: 1.2em;
+    margin: 20px 0; /* Ajustado para más consistencia en el espaciado */
+    max-width: 600px;
+}
+
+.cta-container button {
+    font-size: 1em;
+    padding: 10px 15px; /* Mantenemos el padding reducido */
+    background-color: #ffa500;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: background-color 0.3s;
+    width: 200px; /* Añadimos un ancho fijo */
+    /* O puedes usar max-width si prefieres un ancho máximo flexible */
+    /* max-width: 200px; */
+}
+
+.cta-container button:hover {
+    background-color: #cc8400;
+}
+
+
+#contact {
+    background-color: #f4f4f4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-container input,
+.contact-container textarea {
+    width: 90%; /* Ajusta el ancho según necesidades */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-container button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-container button:hover {
+    background-color: #0056b3;
+}
+.session-buttons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.session-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.session-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+.session-buttons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.session-buttons button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.session-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+.service-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.service-card {
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+}
+
+.service-card h3 {
+    color: #333;
+    text-align: center; /* Centrar el texto del encabezado */
+}
+
+.service-card p {
+    padding: 0 15px;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%;
+    }
+}

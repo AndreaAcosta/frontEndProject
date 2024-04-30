@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - StreamCol Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-footer">
+        <div class="session-buttons">
+            <button onclick="location.href='login.html'">Iniciar Sesión</button>
+            <button onclick="location.href='register.html'">Registrarse</button>
+        </div>
+        <h1>StreamCol Gaming</h1>
+        <img src="imgs/logo.jpg" alt="Logo Ahrilu" style="float: right;">
+        <p></p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Servicios Destacados</a></li>
+            <li><a href="#testimonials">Testimonios y Reseñas</a></li>
+            <li><a href="#cta">Call to Action</a></li>
+            <li><a href="#contact">Información de Contacto</a></li>
+        </ul>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>
+            En StreamCol Gaming, nos enorgullecemos de ser pioneros en la revolución del streaming de videojuegos en Colombia desde nuestra fundación en 2024. Con sede principal en Bogotá, ofrecemos a los entusiastas del gaming una plataforma vibrante y dinámica donde pueden disfrutar de contenido de alta calidad y participar en una comunidad activa y acogedora. Nuestro equipo está compuesto por apasionados gamers, técnicos expertos y creativos digitales, todos comprometidos en proporcionar la mejor experiencia de entretenimiento en plataformas como Twitch, donde transmitimos diariamente una diversidad de videojuegos que captan la atención tanto de audiencias locales como internacionales.
+        </p>
+        <p>
+            Además, en StreamCol Gaming nos dedicamos al crecimiento y fortalecimiento de redes sociales, ayudando a nuestros streamers y colaboradores a ampliar su alcance y mejorar su presencia en línea. Nuestro objetivo es no solo ser líderes en el streaming de videojuegos, sino también un recurso valioso para la comunidad gaming, proporcionando soporte, educación y oportunidades de networking que fomentan el desarrollo y éxito de nuestros miembros. Únete a nosotros para ser parte de esta emocionante aventura en el mundo del gaming.
+        </p>
+    </section>
+    <section id="services">
+        <h2>Servicios destacados</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <img src="imgs/social-media-icon.png" alt="Gestión de Redes Sociales">
+                <h3>Gestión de Redes Sociales y Marketing Digital</h3>
+                <p>Ayudar a streamers y colaboradores a mejorar su presencia en línea y ampliar su alcance a través de estrategias efectivas en redes sociales y marketing digital.</p>
+            </div>
+            <div class="service-card">
+                <img src="imgs/networking-icon.jpg" alt="Networking">
+                <h3>Networking y Oportunidades de Desarrollo</h3>
+                <p>Organizar eventos de networking que permitan a los miembros de la comunidad conectar con otros gamers y desarrolladores.</p>
+            </div>
+            <div class="service-card">
+                <img src="imgs/community-icon.png" alt="Comunidad para Gamers">
+                <h3>Comunidad para Gamers</h3>
+                <p>Crear y mantener una comunidad activa y acogedora para los entusiastas del gaming, incluyendo foros y chats en vivo.</p>
+            </div>
+        </div>
+    </section>    
+    <section id="testimonials"  class="hidden">
+        <!-- Área para cargar testimonios aquí -->
+    </section>
+    <section id="cta" class="hidden">
+        <div class="cta-container">
+            <h2>Únete a la Revolución del Gaming</h2>
+            <p>Regístrate ahora para ser parte de la mayor comunidad de gaming en Colombia y disfrutar de beneficios exclusivos.</p>
+            <button type="button" onclick="location.href='register.html'">Regístrate Ahora</button>
+            <img src="imgs/img1.jpg" alt="Logo Ahrilu" style="float: right;">
+        </div>
+    </section>       
+    <section id="contact"  class="hidden">
+        <div class="contact-container">
+            <h2>Contáctanos</h2>
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Nombre Completo" required>
+                <input type="email" name="email" placeholder="Correo Electrónico" required>
+                <input type="tel" name="phone" placeholder="Teléfono" required>
+                <textarea name="description" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+    <script>  //main.js
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll("nav ul li a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", function(e) {
+                e.preventDefault();
+                const allSections = document.querySelectorAll("section");
+                allSections.forEach(sec => sec.classList.add('hidden'));
+                const targetSection = document.querySelector(this.getAttribute('href'));
+                if (targetSection) {
+                    targetSection.classList.remove('hidden');
+                }
+            });
+        });
+    });
+    </script>
+    <footer class="header-footer">
+        Contáctanos: 3125450543 - Correo: aaacosta.poligran.edu.co
+    </footer>
+</body>
+</html>
