@@ -328,5 +328,18 @@ nav ul li a {
 .submit-button:hover {
     background-color: #3a82d1;
 }
+#logoutButton {
+    padding: 5px 15px;
+    background-color: #ff4444; /* Rojo para indicar una acción de 'cerrar sesión' */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#logoutButton:hover {
+    background-color: #cc0000; /* Un rojo más oscuro al pasar el ratón */
+}
 
 

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración</title>
+    <link rel="stylesheet" href="admin.css"> <!-- Asume que el CSS se llama admin.css -->
+</head>
+<body>
+    <header class="header-footer">
+        <div class="content logo-container">
+            <button id="logoutButton" onclick="logout()">Cerrar Sesión</button>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#usuarios">Usuarios</a></li>
+            <li><a href="#testimonios">Testimonios y Reseñas</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <section id="usuarios">
+            <h2>Usuarios Registrados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Servicios</th>
+                        <th>Observaciones</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>juan@example.com</td>
+                        <td>1234567890</td>
+                        <td>Lista de servicios</td>
+                        <td>Ninguna</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Laura Méndez</td>
+                        <td>laura@example.com</td>
+                        <td>0987654321</td>
+                        <td>Soporte técnico, Mantenimiento</td>
+                        <td>Requiere seguimiento</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ricardo Ortiz</td>
+                        <td>ricardo@example.com</td>
+                        <td>1122334455</td>
+                        <td>Instalación de software</td>
+                        <td>Pendiente de pago</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sofía Castro</td>
+                        <td>sofia@example.com</td>
+                        <td>5566778899</td>
+                        <td>Consultoría</td>
+                        <td>Excelente cliente</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Manuel Vargas</td>
+                        <td>manuel@example.com</td>
+                        <td>2233445566</td>
+                        <td>Renovación de equipo</td>
+                        <td>N/A</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Maria Garcia</td>
+                        <td>maria@example.com</td>
+                        <td>0987654321</td>
+                        <td>Consultoría</td>
+                        <td>Pendiente de revisión</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Roberto Gomez</td>
+                        <td>roberto@example.com</td>
+                        <td>1122334455</td>
+                        <td>Desarrollo web</td>
+                        <td>Excelente cliente</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Laura Martínez</td>
+                        <td>laura@example.com</td>
+                        <td>5544332211</td>
+                        <td>Mantenimiento IT</td>
+                        <td>Contrato anual</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Juan Pérez</td>
+                        <td>juan@example.com</td>
+                        <td>1234567890</td>
+                        <td>Lista de servicios</td>
+                        <td>Ninguna</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Laura Méndez</td>
+                        <td>laura@example.com</td>
+                        <td>0987654321</td>
+                        <td>Soporte técnico, Mantenimiento</td>
+                        <td>Requiere seguimiento</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Ricardo Ortiz</td>
+                        <td>ricardo@example.com</td>
+                        <td>1122334455</td>
+                        <td>Instalación de software</td>
+                        <td>Pendiente de pago</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sofía Castro</td>
+                        <td>sofia@example.com</td>
+                        <td>5566778899</td>
+                        <td>Consultoría</td>
+                        <td>Excelente cliente</td>
+                        <td>
+                            <button onclick="editarUsuario(this)">Editar</button>
+                            <button onclick="borrarFila(this)">Borrar</button>
+                        </td>
+                    </tr>
+                    <!-- Más filas según sea necesario -->
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="testimonios">
+            <h2>Testimonios y Reseñas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Correo</th>
+                        <th>Testimonio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los datos deberían ser insertados aquí -->
+                    <tr>
+                        <td>Ana López</td>
+                        <td>ana@example.com</td>
+                        <td>Muy buen servicio.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Martín</td>
+                        <td>carlos@example.com</td>
+                        <td>Respuesta rápida.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>María Gómez</td>
+                        <td>maria@example.com</td>
+                        <td>Excelente atención.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jorge Ramos</td>
+                        <td>jorge@example.com</td>
+                        <td>Buen soporte técnico.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Elena Nito</td>
+                        <td>elena@example.com</td>
+                        <td>Muy recomendable.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ana López</td>
+                        <td>ana@example.com</td>
+                        <td>Muy buen servicio.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Ruiz</td>
+                        <td>carlos@example.com</td>
+                        <td>Excelente atención y resultados.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Sofía Castro</td>
+                        <td>sofia@example.com</td>
+                        <td>Muy satisfecha con el servicio.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Diego Fernández</td>
+                        <td>diego@example.com</td>
+                        <td>Recomiendo ampliamente sus servicios.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Elena Nito</td>
+                        <td>elena@example.com</td>
+                        <td>Profesionales y comprometidos.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Ana López</td>
+                        <td>ana@example.com</td>
+                        <td>Muy buen servicio.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Carlos Martín</td>
+                        <td>carlos@example.com</td>
+                        <td>Respuesta rápida.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>María Gómez</td>
+                        <td>maria@example.com</td>
+                        <td>Excelente atención.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Jorge Ramos</td>
+                        <td>jorge@example.com</td>
+                        <td>Buen soporte técnico.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <tr>
+                        <td>Elena Nito</td>
+                        <td>elena@example.com</td>
+                        <td>Muy recomendable.</td>
+                        <td><button onclick="borrarFila(this)">Borrar</button></td>
+                    </tr>
+                    <!-- Más filas según sea necesario -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer class="footer-bar">
+        <p>Derechos reservados © 2024</p>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const links = document.querySelectorAll('nav ul li a');
+            const sections = document.querySelectorAll('.content section');
+    
+            function hideAllSections() {
+                sections.forEach(section => {
+                    section.style.display = 'none';
+                });
+            }
+    
+            function showSection(sectionId) {
+                hideAllSections();
+                document.getElementById(sectionId).style.display = 'block';
+            }
+    
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('href').slice(1); // Elimina el "#" del href
+                    showSection(sectionId);
+                });
+            });
+    
+            // Iniciar mostrando solo la sección de usuarios
+            showSection('usuarios');
+        });
+    </script>
+    
+</body>
+</html>

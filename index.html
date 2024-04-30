@@ -68,15 +68,30 @@
     <section id="contact"  class="hidden">
         <div class="contact-container">
             <h2>Contáctanos</h2>
-            <form action="submit_form.php" method="POST">
+            <form id="contactForm" action="submit_form.php" method="POST">
                 <input type="text" name="name" placeholder="Nombre Completo" required>
                 <input type="email" name="email" placeholder="Correo Electrónico" required>
                 <input type="tel" name="phone" placeholder="Teléfono" required>
                 <textarea name="description" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                <button type="submit">Enviar Mensaje</button>
+                <button type="button" onclick="submitAndClearForm()">Enviar Mensaje</button>
             </form>
         </div>
     </section>
+    <script>
+        function submitAndClearForm() {
+            var form = document.getElementById('contactForm');
+        
+            // Aquí podrías agregar lógica para validar o procesar los datos antes de enviarlos
+            // Por ejemplo:
+            // if (!validateForm(form)) {
+            //     return;
+            // }
+        
+            //form.submit(); // Envía el formulario
+        
+            form.reset(); // Limpia el formulario después de enviarlo
+        }
+        </script>
     <script>  //main.js
     document.addEventListener("DOMContentLoaded", function() {
         const navLinks = document.querySelectorAll("nav ul li a");

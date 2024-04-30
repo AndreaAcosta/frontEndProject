@@ -1,0 +1,87 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+}
+.content {
+    flex: 1 0 auto;
+    padding: 10px;
+}
+.header-footer, .footer-bar {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+footer {
+    flex-shrink: 0;
+}
+
+nav {
+    background: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+#logoutButton {
+    padding: 5px 15px;
+    background-color: #ff4444; /* Rojo para indicar una acción de 'cerrar sesión' */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    float: right;
+    transition: background-color 0.3s ease;
+}
+
+#logoutButton:hover {
+    background-color: #cc0000; /* Un rojo más oscuro al pasar el ratón */
+}
+.inactive-section {
+    display: none;
+}

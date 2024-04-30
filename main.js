@@ -1,18 +1,16 @@
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevenir el comportamiento de envío predeterminado
 
-    // Aquí podrías añadir validaciones adicionales o enviar datos a un servidor
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
-    // Simplemente vamos a verificar que los campos no estén vacíos
     if (email && password) {
-        window.location.href = 'home.html'; // Redireccionar a home si todo está correcto
+        window.location.replace('home.html');
     } else {
         alert('Por favor, rellene todos los campos.');
     }
-}
-);
+});
+
 document.addEventListener("DOMContentLoaded", function() {
     const aboutLink = document.querySelector('a[href="#about"]');
     const aboutSection = document.getElementById('about');
@@ -50,6 +48,43 @@ function checkUserSession() {
     // Esta función debe ser implementada según cómo manejes las sesiones
     // Por ejemplo, podría verificar una cookie o un token almacenado en localStorage
     return !!localStorage.getItem('userLoggedIn'); // Ejemplo de comprobación básica
+}
+function checkUserLoggedIn() {
+    // Supongamos que 'userLoggedIn' es una variable que indica si el usuario está autenticado
+    if (userLoggedIn) {
+        document.getElementById('logoutButton').style.display = 'block';
+    } else {
+        document.getElementById('logoutButton').style.display = 'none';
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    checkUserLoggedIn();
+});
+function borrarFila(btn) {
+    var row = btn.parentNode.parentNode;
+    row.parentNode.removeChild(row);
+}
+
+function editarUsuario(btn) {
+    var row = btn.parentNode.parentNode;
+    var cells = row.children;
+    for (let i = 0; i < cells.length - 1; i++) { // Evitar la última celda que contiene los botones
+        let text = cells[i].textContent;
+        cells[i].innerHTML = `<input type="text" value="${text}">`;
+    }
+    btn.textContent = "Guardar";
+    btn.onclick = function() { guardarCambios(this); };
+}
+
+function guardarCambios(btn) {
+    var row = btn.parentNode.parentNode;
+    var inputs = row.querySelectorAll("input");
+    inputs.forEach((input, index) => {
+        row.children[index].textContent = input.value;
+    });
+    btn.textContent = "Editar";
+    btn.onclick = function() { editarUsuario(this); };
 }
 
 

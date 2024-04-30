@@ -10,8 +10,7 @@
 <body>
     <header class="header-footer">
         <div class="content logo-container">
-            <button id="logoutButton" onclick="logout()" style="display: none;">Cerrar Sesión</button>
-            <img src="imgs/logo.jpg" id="logo" alt="Logo">
+            <button id="logoutButton" onclick="logout()">Cerrar Sesión</button>
         </div>
     </header>    
     <nav>
@@ -95,6 +94,7 @@
     <footer class="footer-bar">
         Contáctanos: 3125450543 - Correo: aaacosta.poligran.edu.co
     </footer>
+    <script src="main.js"></script>
     <script>
         document.getElementById('link-about').addEventListener('click', function(event) {
             event.preventDefault();
@@ -160,8 +160,7 @@
             }, 3000);  // El mensaje se muestra durante 3 segundos antes de comenzar a desaparecer
         }
     </script>
-    <script src="main.js"></script>
-    <script>  main.js
+    <script> // main.js
     document.addEventListener("DOMContentLoaded", function() {
         const navLinks = document.querySelectorAll("nav ul li a");
         navLinks.forEach(link => {
