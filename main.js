@@ -86,6 +86,20 @@ function guardarCambios(btn) {
     btn.textContent = "Editar";
     btn.onclick = function() { editarUsuario(this); };
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll("nav ul li a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const allSections = document.querySelectorAll("section");
+            allSections.forEach(sec => sec.classList.add('hidden')); // Oculta todas las secciones
+            const targetSection = document.querySelector(this.getAttribute('href')); // Muestra la sección correspondiente
+            if (targetSection) {
+                targetSection.classList.remove('hidden');
+            }
+        });
+    });
+});
 
 
 
